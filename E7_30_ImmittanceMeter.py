@@ -6,7 +6,7 @@ import math
 import struct
 
 
-class ImmitanceMeter:
+class ImmittanceMeter:
     def __init__(self, COM_PORT, COM_timeout, frame_timeout=3.0):
         self.COM_PORT = COM_PORT
         self.COM_timeout = COM_timeout
@@ -93,3 +93,4 @@ class ImmitanceMeter:
                     if len(frame) == 20:
                         return self.parse_frame(frame)
         return None # Если не нашёлся кадр с данными.
+

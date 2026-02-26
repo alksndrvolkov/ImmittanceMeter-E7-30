@@ -1,5 +1,5 @@
 import time
-from E7_30_ImmittanceMeter import ImmitanceMeter
+from E7_30_ImmittanceMeter import ImmittanceMeter
 
 meter = ImmitanceMeter("COM2", 0.2)
 meter.set_frequency(1100) # частота в Гц
@@ -8,4 +8,5 @@ time.sleep(1) # если скорость измерений на приборе
 impedance_module, impedance_phase = meter.read_impedance()
 print("Impedance module: ", impedance_module, " Ω")
 print("Impedance phase: ", impedance_phase, " °")
+
 meter.close_serial()

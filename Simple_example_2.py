@@ -8,7 +8,6 @@ frequency_list = [100,2000,33000, 3000000] # сканируемые частот
 for frequency in frequency_list:
     print("frequency now:", frequency)
     meter.set_frequency(frequency)
-    time.sleep(1) # если скорость измерений на приборе стоит "средне", ждём первое измерение
     impedance_module, impedance_phase = meter.read_impedance()
     print("Impedance module: ", impedance_module, " Ω")
     print("Impedance phase: ", impedance_phase, " °")
@@ -16,5 +15,6 @@ for frequency in frequency_list:
 
 
 meter.close_serial()
+
 
 

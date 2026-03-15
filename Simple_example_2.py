@@ -1,8 +1,7 @@
-import time
-from E7_30_ImmittanceMeter import ImmittanceMeter
+from E7_30_ImmittanceMeter_V2 import ImmittanceMeter
 
 meter = ImmittanceMeter("COM2", 0.2)
-
+print("Reading rate:", meter.measurements_rate) # вычисление выбранной на приборе скорости измерения
 frequency_list = [100,2000,33000, 3000000] # сканируемые частоты в Гц
 
 for frequency in frequency_list:
@@ -13,8 +12,4 @@ for frequency in frequency_list:
     print("Impedance phase: ", impedance_phase, " °")
     print("")
 
-
 meter.close_serial()
-
-
-
